@@ -1,0 +1,36 @@
+import os
+import getpass
+import time
+import platform
+
+print("\nHello from an Activator Windows, Office\nSamoilov Yaroslav©\nall rights are protected\n")
+time.sleep(3)
+print("on your deckstop was create fail\nWIN keys\n")
+time.sleep(3)
+print("please wait...\n")
+
+time.sleep(3)
+
+my_system = platform.uname()
+
+print(f"System: {my_system.system}")
+print(f"Node Name: {my_system.node}")
+print(f"Release: {my_system.release}")
+print(f"Version: {my_system.version}")
+print(f"Machine: {my_system.machine}")
+print(f"Processor: {my_system.processor}")
+
+user = os.getenv("USERPROFILE")
+filename = user + "\\Desktop\\WINkeys.txt"
+f = open(filename, "w", encoding="utf-8")
+f.write('')
+
+key = input("Enter the random num\n")
+
+os.system("start cmd")
+os.system("slmgr /ipk " + key)
+os.system("slmgr /skms kms.digiboy.ir")
+os.system("slmgr /ato")
+
+resualt = os.system()
+print(resualt)
